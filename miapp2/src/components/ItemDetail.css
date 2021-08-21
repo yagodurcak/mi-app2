@@ -1,0 +1,7 @@
+.imagen{
+    width: 700px;
+    height: 500px;
+    display: grid;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
