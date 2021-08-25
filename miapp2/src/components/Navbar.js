@@ -4,7 +4,7 @@ const Navbar = () => {
     return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand mx-5" href="#">
+          <a className="navbar-brand mx-5" href="/">
             Tienda Virtual
           </a>
           <button
@@ -21,12 +21,12 @@ const Navbar = () => {
           <div className="collapse navbar-collapse d-flex justify-content-end mx-5" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/">
                   Catalogo
                 </a>
               </li>
