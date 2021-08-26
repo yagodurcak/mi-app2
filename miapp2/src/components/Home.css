@@ -1,0 +1,27 @@
+body {
+    height: 100%;
+    width: full-width;
+    /* background-color: aqua; */
+   
+    background-image: url("../img/descarga.jpeg");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+
+}
+
+.front{
+    height: 550px;
+    /* background-color: aqua; */
+    display: grid;
+}
+
+.texto{
+    color: aliceblue;
+    /* font-size: 40px; */
+
+    margin-top: -400px;
+}
+
+.title{
+    font-size: 50px;
+}
