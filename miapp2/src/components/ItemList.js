@@ -1,11 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react';
 import Item from './Item';
-import {productosJson} from "../data/products"
+import {productosJson} from "../data/products";
+
 
 
 const ItemList = () => {
 
     const [products, setProducts] = useState([]);
+
+    
 
     useEffect(() => {
         new Promise((resolve, reject) => {
@@ -24,15 +27,16 @@ const ItemList = () => {
 
 
     return ( 
-        <div className="row">
+        <div>
+            <div className="row">
             
-      
-            { products.map((products)=>
-            <Item nombre={products.nombre} img={products.img} precio={products.precio} id={products.id}/>)}
-
-
-         
+                { products.map((products)=>
+                <Item nombre={products.nombre} img={products.img} precio={products.precio} id={products.id}/>)}
+            
+            </div>
+                
         </div>
+        
       
         )
         

@@ -38,7 +38,7 @@ const ItemCount2 = ({onAdd, stock, items} ) => {
                 <button className="btn btn-primary" onClick={Sumar}>+</button>
                 
               </div>
-              <div className="d-flex justify-content-center">{ (items > 0 ) ? <button className="btn btn-success mt-2 ">Terminar compra </button> : null }</div>
+              
             </div>
           </div>
       </div>

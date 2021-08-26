@@ -1,12 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-          <a className="navbar-brand mx-5" href="/">
+          <Link to={`/`}><a className="navbar-brand mx-5" >
             Tienda Virtual
-          </a>
+          </a></Link>
+          
           <button
             className="navbar-toggler"
             type="button"
@@ -21,19 +23,25 @@ const Navbar = () => {
           <div className="collapse navbar-collapse d-flex justify-content-end mx-5" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link to={`/`}>                
+                <a className="nav-link active" aria-current="page" >
                   Home
                 </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <Link to={`/catalogo`} >
+                <a className="nav-link" >
                   Catalogo
                 </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link to="/cart">
+                <a className="nav-link">
                 <i class="bi bi-cart"></i>
                 </a>
+                </Link>
               </li>
   
             </ul>

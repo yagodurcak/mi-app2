@@ -8,26 +8,40 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import React from 'react';
+import React, {useState} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import { ThemeContext } from './context/cartContext';
+import CartContainer from './components/CartConteiner';
+import Home from './components/Home';
+
 
 
 function App() {
+
+  const [cart, setCart] = useState({});
+
+
+
   return (
-
-
-    <BrowserRouter> 
-            <Navbar/>
-            <Switch>
-              <Route exact path="/">
-                    <ItemListContainer />
-              </Route>
-              <Route exact  path= "/item/:id">
-                    <ItemDetailContainer />
-              </Route>
-            </Switch>
-    </BrowserRouter>
-   
+    <ThemeContext.Provider value={{cart, setCart}}>
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route exact path="/catalogo">
+            <ItemListContainer />
+          </Route>
+          <Route exact path="/item/:id">
+            <ItemDetailContainer />
+          </Route>
+          <Route exact path="/cart">
+            <CartContainer/>
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </ThemeContext.Provider>
   );
 }
 
