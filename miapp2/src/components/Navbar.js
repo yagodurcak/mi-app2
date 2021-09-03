@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
+import  ThemeContext from '../context/cartContext';
 
 const Navbar = () => {
+
+  const {setCarrito,carrito} = useContext(ThemeContext)
     return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
@@ -39,7 +42,9 @@ const Navbar = () => {
               <li className="nav-item">
                 <Link to="/cart">
                 <a className="nav-link">
-                <i class="bi bi-cart"></i>
+
+                <i class="bi bi-cart">{carrito.nombre}</i>
+               
                 </a>
                 </Link>
               </li>

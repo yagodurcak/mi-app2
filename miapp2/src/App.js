@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import React, {useState} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import { ThemeContext } from './context/cartContext';
+import { CarritoProvider } from './context/cartContext';
 import CartContainer from './components/CartConteiner';
 import Home from './components/Home';
 
@@ -18,12 +18,13 @@ import Home from './components/Home';
 
 function App() {
 
-  const [cart, setCart] = useState({});
 
 
 
   return (
-    <ThemeContext.Provider value={{cart, setCart}}>
+
+   
+    <CarritoProvider>
       <BrowserRouter>
         <Navbar />
         <Switch>
@@ -41,7 +42,7 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </ThemeContext.Provider>
+    </CarritoProvider>
   );
 }
 

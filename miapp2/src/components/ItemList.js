@@ -30,8 +30,8 @@ const ItemList = () => {
         <div>
             <div className="row">
             
-                { products.map((products)=>
-                <Item nombre={products.nombre} img={products.img} precio={products.precio} id={products.id}/>)}
+                { products.map((pepe)=>
+                <Item nombre={pepe.nombre} img={pepe.img} precio={pepe.precio} id={pepe.id}/>)}
             
             </div>
                 
