@@ -4,8 +4,19 @@ import  ThemeContext from '../context/cartContext';
 
 const Navbar = () => {
 
-  const {setCarrito,carrito} = useContext(ThemeContext)
-    return ( 
+  const {articulos, carrito} = useContext(ThemeContext);
+
+
+
+
+
+
+
+
+
+
+
+  return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <Link to={`/`}><a className="navbar-brand mx-5" >
@@ -43,12 +54,13 @@ const Navbar = () => {
                 <Link to="/cart">
                 <a className="nav-link">
 
-                <i class="bi bi-cart">{carrito.nombre}</i>
-               
+                <i class="bi bi-cart">{articulos}</i>
+                             
                 </a>
                 </Link>
               </li>
-  
+
+
             </ul>
           </div>
         </div>
