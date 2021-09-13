@@ -1,10 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import  ThemeContext from '../context/cartContext';
 
 const Navbar = () => {
 
-  const {articulos, carrito} = useContext(ThemeContext);
+  const { articulos} = useContext(ThemeContext);
+
 
 
   return ( 

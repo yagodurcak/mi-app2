@@ -48,7 +48,8 @@ export const CarritoProvider = ({children}) => {
 
     useEffect(() => {
 
-      carrito.map(prod => setArticulos(articulos + parseInt(prod.cantidad)));
+      
+      carrito.map(prod => setArticulos( parseInt(prod.cantidad) + articulos));
       
     }, [carrito]);
 
@@ -57,7 +58,7 @@ export const CarritoProvider = ({children}) => {
 
       // 3 COMPARTIR EL ESTADO GLOBAL (Provider/value)
 
-    <ThemeContext.Provider value={{pets, setCarrito,carrito, setPets, articulos}}>
+    <ThemeContext.Provider value={{pets, setCarrito,carrito, setPets, articulos, setArticulos}}>
 
               {/* componentes hijos  */}
               {children}

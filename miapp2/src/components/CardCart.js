@@ -3,13 +3,27 @@ import ThemeContext from '../context/cartContext';
 
 const CardCart = (props) => {
 
-    const {setCarrito,carrito} = useContext(ThemeContext);
+    const {setCarrito,carrito, articulos, setArticulos} = useContext(ThemeContext);
+
+    
     
    const eliminarItem = (id) => {    
      
+    
+    
      const newCart = carrito.filter(prod => (prod.id != id))
  
-     setCarrito(newCart)
+     setCarrito(newCart);
+
+     var art= 0;
+     
+     setArticulos(art);
+
+          
+
+     console.log(art);
+    
+
    };
 
 

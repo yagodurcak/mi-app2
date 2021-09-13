@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Item from './Item';
-import ItemPets from './ItemPets';
-import {productosJson} from "../data/products";
+// import ItemPets from './ItemPets';
+// import {productosJson} from "../data/products";
 import  ThemeContext from '../context/cartContext';
 
 
