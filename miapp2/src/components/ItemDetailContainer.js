@@ -1,12 +1,15 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { useParams } from 'react-router-dom';
 import {productosJson} from "../data/products"
 import ItemDetail from './ItemDetail';
+import  ThemeContext from '../context/cartContext';
 
 
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState([]);
+
+    const {pets,setPets} = useContext(ThemeContext);    
 
     const {id} = useParams();
 
@@ -17,8 +20,8 @@ const ItemDetailContainer = () => {
        new Promise((resolve, reject) => {
             
             setTimeout(() => {
-                resolve(productosJson.filter((prod) => prod.id == id))
-            }, 2000);
+                resolve(pets.filter((prod) => prod.id == id))
+            }, 0);
         }).then((data)=> setProduct(data[0]));   
     
     }, []);

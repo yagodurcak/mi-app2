@@ -5,9 +5,7 @@ const CardCart = (props) => {
 
     const {setCarrito,carrito} = useContext(ThemeContext);
     
-   const eliminarItem = (id) => {
-
-    
+   const eliminarItem = (id) => {    
      
      const newCart = carrito.filter(prod => (prod.id != id))
  

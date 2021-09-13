@@ -7,15 +7,6 @@ const Navbar = () => {
   const {articulos, carrito} = useContext(ThemeContext);
 
 
-
-
-
-
-
-
-
-
-
   return ( 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">

@@ -19,6 +19,8 @@ const ItemCount2 = ({onAdd, stock, items} ) => {
     };
     const Sumar = () => {
 
+      console.log(stock, items);
+
         if (items < stock) {
             
             onAdd(items + 1 );

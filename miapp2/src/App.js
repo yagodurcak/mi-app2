@@ -8,7 +8,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CarritoProvider } from './context/cartContext';
 import CartContainer from './components/CartConteiner';
@@ -17,9 +17,6 @@ import Home from './components/Home';
 
 
 function App() {
-
-
-
 
   return (
 
@@ -43,6 +40,11 @@ function App() {
         </Switch>
       </BrowserRouter>
     </CarritoProvider>
+
+
+
+       
+   
   );
 }
 

@@ -20,13 +20,12 @@ const ItemDetail = (props) => {
     const verCarrito = () => {
       
       //defino producto para el carrito
-
-      
-    
-    
+   
     function yaEsta(producto) {
         return producto.id === props.id;
     }
+
+
     
     if (carrito.find(yaEsta)) {
       setError(true);
@@ -46,10 +45,6 @@ const ItemDetail = (props) => {
     }
      
     }
-    
-  
-
-
     return (
       <div className="container mt-5">
         <div className="row">

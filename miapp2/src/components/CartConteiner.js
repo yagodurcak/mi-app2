@@ -6,11 +6,12 @@ import { Link } from 'react-router-dom';
 
 const CartContainer = () => {
 
-   const {setCarrito,carrito} = useContext(ThemeContext);
+   const {setCarrito,carrito, articulos, setArticulos} = useContext(ThemeContext);
     
 
    const borrarTodo = () => {
-       setCarrito([])
+       setCarrito([]);      
+
    };
 
     return (
