@@ -15,14 +15,8 @@ const CardCart = (props) => {
  
      setCarrito(newCart);
 
-     var art= 0;
-     
-     setArticulos(art);
-
-          
-
-     console.log(art);
     
+       
 
    };
 
