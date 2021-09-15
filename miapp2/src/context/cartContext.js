@@ -48,7 +48,7 @@ export const CarritoProvider = ({children}) => {
 
     useEffect(() => {
 
-      
+      setArticulos(0);
       carrito.map(prod => setArticulos( parseInt(prod.cantidad) + articulos));
       
     }, [carrito]);

@@ -14,6 +14,7 @@ const CardCart = (props) => {
      const newCart = carrito.filter(prod => (prod.id != id))
  
      setCarrito(newCart);
+     setArticulos(0)
 
     
        
