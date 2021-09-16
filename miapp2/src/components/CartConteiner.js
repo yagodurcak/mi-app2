@@ -74,6 +74,7 @@ const CartContainer = () => {
   )
   borrarTodo();
    
+  alert("Tu orden fue enviada con el numero: " + cliente.pedido)
   
 
    }
