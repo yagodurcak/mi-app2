@@ -14,6 +14,8 @@ const CartContainer = () => {
 
    const [incompleto, setIncompleto] = useState(false)
 
+   const [alertas, setAlertas] = useState(false)
+
    const [cliente, setCliente] = useState({
        nombre: "",
        email:"",
@@ -71,15 +73,13 @@ const CartContainer = () => {
     }
   )
   borrarTodo();
-
-  <Link to="/" className="d-flex justify-content-center">               
-                
+   
   
-</Link>
-
-
 
    }
+
+ 
+   
    
    const enviarOrden = async () => {
 
@@ -97,9 +97,11 @@ const CartContainer = () => {
    };
 
     return (
+
+      
       <div className="container">
         <div className="row">
-          <div className="col-12">
+           <div className="col-12">
             {carrito.length == 0 ? (
               <div>
                 <h2 className="text-center mt-5">
@@ -170,14 +172,12 @@ const CartContainer = () => {
                             className="btn btn-danger mt-4"
                             onClick={() => borrarTodo()}
                           >
-                            {" "}
                             Eliminar todos
                           </button>
                           <button
                             className="btn btn-primary mt-4 mx-4"
                             type="submit"
                           >
-                            {" "}
                             Finalizar compra
                           </button>
                         </div>
